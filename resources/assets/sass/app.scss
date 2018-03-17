@@ -1,0 +1,92 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.top-left {
+  position: relative;
+  left: 10px;
+  top: 0px;
+}
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+  }
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 84px;
+}
+
+.links > a , .links{
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nounderline, .nounderline:hover{
+  text-decoration: none;
+}
+
+.m-b-md {
+  margin-bottom: 30px;
+}
+
+.width-50{
+  width:50%;
+}
+
+.top-md-12{
+  margin-top:12%;
+}
+
+.m-t-4{
+  margin-top: 4%;
+}
+
+.p-t-15{
+  padding-top: 15px;
+}
+
+.p-r-20{
+  padding-right: 20px;
+}
+
