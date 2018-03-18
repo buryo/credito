@@ -14,7 +14,7 @@
                     <label for="id_organisatie" class="col-md-4 col-form-label text-md-right">{{ __('Organisatie Naam') }}</label>
 
                     <div class="col-md-6">
-                        <input id="id_organisatie" type="text" class="form-control{{ $errors->has('id_organisatie') ? ' is-invalid' : '' }}" name="id_organisatie" value="{{$organisatie->naam}}" required>
+                        <input id="id_organisatie" type="text" class="form-control{{ $errors->has('id_organisatie') ? ' is-invalid' : '' }}" name="id_organisatie" value="{{$organisatie->naam}}" readonly required>
                     </div>
                 </div>
 

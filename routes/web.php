@@ -9,6 +9,7 @@ Route::get('/home', 'Controller@index');
 
 Route::get('/organisaties', 'OrganisatiesController@index');
 Route::get('/organisaties/{id}', 'OrganisatiesController@show');
+Route::post('/organisaties/{id}', 'gebruikerController@delete');
 
 
 Route::get('/gebruikers/{gebruiker}', 'gebruikerController@getUser');

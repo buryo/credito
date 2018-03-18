@@ -18,19 +18,21 @@ class gebruikerController extends Controller
         return view('gebruikers.medewerkerAanmaken', compact('organisatie'));
     }
 
-    public function getUser($id){
+    public function getUser($id)
+    {
         $medewerker = User::find($id);
         return view('gebruikers.gebruiker', compact('medewerker'));
     }
 
-    public function store(Request $request){
-        $this->validate(\request(),[
-           'id_organisatie' => 'required',
-           'name' => 'required',
-           'tussenvoegsel' => 'max:255',
-           'achternaam' => 'required',
-           'email' => 'required|unique:users',
-           'password' => 'required|confirmed|min:6'
+    public function store(Request $request)
+    {
+        $this->validate(\request(), [
+            'id_organisatie' => 'required',
+            'name' => 'required',
+            'tussenvoegsel' => 'max:255',
+            'achternaam' => 'required',
+            'email' => 'required|unique:users',
+            'password' => 'required|confirmed|min:6'
         ]);
 
         User::create([
@@ -44,7 +46,17 @@ class gebruikerController extends Controller
         return back();
     }
 
-    public function updateUser(Request $request, $id){
+    public function delete(Request $request)
+    {
+        $checkedCheckboxes = $request->checkbox;
+
+        DB::table('users')->whereIn('id', $checkedCheckboxes)->delete();
+
+        return back();
+    }
+
+    public function updateUser(Request $request, $id)
+    {
         $data = $request->validate([
             'id_organisatie' => 'required|max:255',
             'name' => 'required|max:255',

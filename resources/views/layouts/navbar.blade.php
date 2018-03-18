@@ -19,7 +19,7 @@
 
                     @if (Route::has('login'))
                         @auth
-                        <a href="{{ url('/mijn_credito') }}">Mijn credito</a>
+                        <a href="{{ url('#') }}">Mijn credito</a>
 
                         {{--After login, show and activate logout--}}
                         <a href="{{ route('logout') }}"
