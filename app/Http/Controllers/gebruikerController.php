@@ -43,7 +43,15 @@ class gebruikerController extends Controller
             'email' => $request['email'],
             'password' => Hash::make($request['password'])
         ]);
-        return back();
+
+        $gebruiker = $request;
+        return view('gebruikers.greetings', compact('gebruiker'));
+
+    }
+
+    public function getAllUsers($organisatie){
+        $medewerkers = DB::table('users')->where('id_organisatie', $organisatie)->get();
+        return view('gebruikers.gebruiker-zoeken', compact('medewerkers'));
     }
 
     public function delete(Request $request)

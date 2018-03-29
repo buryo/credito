@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link href="/css/app.css" rel="stylesheet" type="text/css">
 
+
 </head>
 
 <body>
@@ -24,6 +25,7 @@
 
 <footer class="container-fluid">
     <p>Copyright © Credito-services 2018</p>
+    <script src="{{ URL::asset('/js/custom.js') }}"></script>
 </footer>
 </body>
 </html>

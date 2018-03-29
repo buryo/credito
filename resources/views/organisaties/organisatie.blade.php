@@ -7,6 +7,7 @@
             <div class="float-right"><a href="/organisaties">Terug</a></div>
             <div class="float-right p-r-20"><a href="/organisaties/{{$organisatie[0]}}/medewerker-aanmaken">Medewerker
                     aanmaken</a></div>
+            <div class="float-right p-r-40"><a href="/gebruiker-zoeken/{{$organisatie[0]}}">Zoeken medewerker</a></div>
         </div>
         <div class="card-body">
             <form method="post" action="/organisaties/{{$organisatie[0]}}">
